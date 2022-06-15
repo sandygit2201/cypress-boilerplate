@@ -1,0 +1,27 @@
+{
+  "name": "cypress-boilerplate",
+  "version": "1.0.0",
+  "description": "cypress boilerplate project for way2automation demo",
+  "main": "index.js",
+  "scripts": {
+    "cy:run": "npx cypress run",
+    "cy:run-upload-results": "npx cypress run --record --key=ffbcff4b-ee62-4a1c-9442-e93716ac0184"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/sandygit2201/cypress-boilerplate.git"
+  },
+  "author": "sandeep kumar c",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sandygit2201/cypress-boilerplate/issues"
+  },
+  "homepage": "https://github.com/sandygit2201/cypress-boilerplate#readme",
+  "devDependencies": {
+    "cypress": "10.1.0"
+  },
+  "dependencies": {
+    "cypress-cucumber-preprocessor": "4.3.1",
+    "cypress-xpath": "1.6.2"
+  }
+}
