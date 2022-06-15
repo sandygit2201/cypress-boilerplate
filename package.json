@@ -4,8 +4,8 @@
   "description": "cypress boilerplate project for way2automation demo",
   "main": "index.js",
   "scripts": {
-    "cy:run": "npx cypress run",
-    "cy:run-upload-results": "npx cypress run --record --key=ffbcff4b-ee62-4a1c-9442-e93716ac0184"
+    "cy:execute-scripts": "npx cypress run",
+    "cy:execute-scripts-upload-results": "npx cypress run --record --key=ffbcff4b-ee62-4a1c-9442-e93716ac0184"
   },
   "repository": {
     "type": "git",
