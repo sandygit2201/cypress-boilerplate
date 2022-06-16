@@ -1,3 +1,5 @@
+// Fill user details in checkout page. 
+// User details are read from userdetails.json fixture file
 export function fillUserDetailsAndContinueToCheckout() {
   cy.fixture("userdetails").then((UserInfo) => {
     cy.get("#first-name").type(UserInfo.firstName);
@@ -7,6 +9,7 @@ export function fillUserDetailsAndContinueToCheckout() {
   });
 }
 
+// Verify details at order confirmation page
 export function verifyCheckoutOverview() {
   cy.fixture("orderDetails").then((OrderDetails) => {
     cy.get(".summary_subtotal_label").should(

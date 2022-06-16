@@ -20,27 +20,30 @@ import {
 describe("Sauce demo spec", () => {
   const USERNAME = Cypress.env("username");
   const PASSWORD = Cypress.env("password");
+  
+  // Login to application and verify home page
   it("Login to sauce Demo site", () => {
     cy.visit("/");
     validateElementsInLoginPage();
     loginAs(USERNAME, PASSWORD);
+    verifyHomePage()
   });
-  it("verify product details", () => {
+
+// Navigate to a product page and verify product details like product description, title and price
+  it("Verify fleeceJacket product details", () => {
     cy.visit("/");
     loginAs(USERNAME, PASSWORD);
     const PRODUCTNAME = "fleeceJacket";
-    verifyHomePage();
     navigateToProductPage(PRODUCTNAME);
     verifyProductDetails(PRODUCTNAME);
   });
 
-  it("Order Product", () => {
+  // Order a product and verify product  details at checkout page.
+  it("Order fleeceJacket Product", () => {
     cy.visit("/");
     loginAs(USERNAME, PASSWORD);
     const PRODUCTNAME = "fleeceJacket";
-    verifyHomePage();
     navigateToProductPage(PRODUCTNAME);
-    verifyProductDetails(PRODUCTNAME);
     addProductToCart();
     navigateToCartPage();
     navigateToCheckoutPage();
